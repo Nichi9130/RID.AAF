@@ -11,6 +11,9 @@ namespace DataLayer
     /// </summary>
     public class AccessDataLayer
     {
+        /// <summary>
+        /// AccessDataLayer handles the interaction with the database
+        /// </summary>
         public string LoggerPath = Environment.CurrentDirectory + @"\Logger.txt";
 
         #region // ExecuteQuery method

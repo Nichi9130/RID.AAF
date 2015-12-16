@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class ConnectionStrings
+    public class ConnectionStrings
     {
+        //todo fill in once DB is created data is validated
+        public const string AafDBConnectionString = @"Source";
     }
 }
