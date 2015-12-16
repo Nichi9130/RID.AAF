@@ -97,7 +97,7 @@ namespace DataLayer
         }
         #endregion
 
-        #region //ExecuteNonQuery Method
+        #region //ExecuteNonQuery method
 
         public int ExecuteNonQuery(string connectionString, string nonQuery, CommandType commandType)
         {
@@ -125,7 +125,7 @@ namespace DataLayer
 
         #endregion
 
-         #region
+        #region //GetDataTable method
         /// <summary>
         /// Public DataTable GetDataTable method Executes the query, and returns a datable when the execution is succesful.
         /// </summary>
