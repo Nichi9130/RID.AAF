@@ -24,5 +24,10 @@ namespace NICHI.RID.AAF
         {
             InitializeComponent();
         }
+
+        private void AppNamesListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
