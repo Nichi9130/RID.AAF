@@ -11,7 +11,7 @@ namespace BusinessLayer
 {
     public class CreateApps
     {
-        private readonly AccessDataLayer _dataLayerHelperObj = new AccessDataLayer();
+        private AccessDataLayer _dataLayerHelperObj = new AccessDataLayer();
 
         //todo fill in connection string once DB is configured
         public const string ConnectionString = @"FillinConnectionString"; 

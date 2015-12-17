@@ -16,7 +16,7 @@ namespace DataLayer
         /// </summary>
         public string LoggerPath = Environment.CurrentDirectory + @"\Logger.txt";
 
-        #region // ExecuteQuery method
+        #region //ExecuteQuery method
         /// <summary>
         /// Public void ReturnRowsStoredProcedure method Execute the read query.
         /// </summary>
