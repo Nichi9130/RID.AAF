@@ -1,4 +1,4 @@
-# RID.AAF
+# TSH.Dev.AAF
 WPF application to mimic functionality found in AAF environment. Allow verified active directory users to perform CRUD operations 
 on application configurations - TSH.Dev
 
