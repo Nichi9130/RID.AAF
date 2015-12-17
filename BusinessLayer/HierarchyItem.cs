@@ -48,15 +48,36 @@ namespace BusinessLayer
 
         private bool XElementExistsByAtribute(XElement root, string attributeName, string attributeValue)
         {
-            //todo (Check self) 
+            // Check self
+            if (root.Attributes().Any(e => (e.Name == attributeName && e.Value == attributeValue)))
+            {
+                return true;
+            }
 
-            //todo (Check children)
-            return true;
+            //Check children
+            foreach (XElement item in root.Descendants())
+            {
+               if (item.Attributes().Any(e =>(e.Name == attributeName && e.Value == attributeValue)))
+                
+                   return true;
+                
+            }
+            return false;
         }
 
-        private void BuildHierarchicalData()
+          private void BuildHierarchicalData()
         {
             // todo implement logic
         }
+
+        private void BuildElement(XElement element, ApplicationConfigurationModel item)
+        {
+            // todo implement logic for parent validation
+        }
+
+          private void AddToHierarchicalData(XElement root, XElement newItem, string parentId)
+          {
+              // todo validate root status / find and add parent 
+          }
     }
 }
