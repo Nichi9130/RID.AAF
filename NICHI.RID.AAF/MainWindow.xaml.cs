@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using BusinessLayer;
 using BusinessLayer.Models;
 
@@ -31,7 +32,10 @@ namespace NICHI.RID.AAF
         private readonly BusinessLogic _bizLogicHelper = new BusinessLogic();
         private readonly PopulateTreeHierarchyWithConfigurationNodes _configHierrarchy = new PopulateTreeHierarchyWithConfigurationNodes();
         private readonly ApplicationConfigurationModel _app = new ApplicationConfigurationModel();
-        private readonly List<ApplicationConfigurationModel> _hydrateConfigurationModels = new List<ApplicationConfigurationModel>(); 
+        private readonly List<ApplicationConfigurationModel> _hydrateConfigurationModels = new List<ApplicationConfigurationModel>();
+
+        public XElement HierarchicalData { get; set; }
+        private HierarchyItem _hierarchyItem { get; set; }
 
         public MainWindow()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    class ApplicationConfigurationModel
+   public class ApplicationConfigurationModel
     {
         public string ApplicationName { get; set; }
         public string AppGuid { get; set; }

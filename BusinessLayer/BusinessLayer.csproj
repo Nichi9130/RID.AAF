@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogic.cs" />
     <Compile Include="CreateApps.cs" />
+    <Compile Include="HierarchyItem.cs" />
     <Compile Include="Models\ApplicationConfigurationModel.cs" />
     <Compile Include="Models\ConfigurationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
