@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +45,17 @@
     <Compile Include="HierarchyItem.cs" />
     <Compile Include="Models\ApplicationConfigurationModel.cs" />
     <Compile Include="Models\ConfigurationModel.cs" />
+    <Compile Include="PopulateTreeHierarchyWithConfigurationNodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{b50bb8cb-c9c8-42e7-8555-b0a3efac2391}</Project>
       <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NICHI.RID.AAF\NICHI.RID.AAF.csproj">
+      <Project>{7c13dfa8-8494-4d2d-8175-46c583b53287}</Project>
+      <Name>NICHI.RID.AAF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

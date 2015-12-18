@@ -92,7 +92,6 @@ namespace BusinessLayer
 
         private void BuildElement(XElement element, ApplicationConfigurationModel item)
         {
-            // todo implement logic for parent validation
             // Does the parent exist?
             if (!XElementExistsByAtribute(HierarchicalData, "id", item.ParentId.ToString(CultureInfo.InvariantCulture)))
             {
@@ -111,8 +110,8 @@ namespace BusinessLayer
 
           private void AddToHierarchicalData(XElement root, XElement newItem, string parentId)
           {
-              // todo validate root status / find and add parent 
-              // validate root has value, then add
+              
+              // validate root has value, then add parent
               if (root.HasElements)
               root.Add(newItem);
 
