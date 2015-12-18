@@ -102,7 +102,7 @@ namespace BusinessLayer
                 if (parentElement != null)
                 {
                     var newElement = new XElement(parentElement.Name,new XAttribute("id", parentElement.Id));
-                   // todo 'Research Recursion for control flow structures - TSH.DEV
+                   // todo 'Research Recursion for control flow structures' - TSH.DEV
                     BuildElement(newElement, parentElement);
                 }
                 AddToHierarchicalData(HierarchicalData, element, item.ParentId);
@@ -112,6 +112,16 @@ namespace BusinessLayer
           private void AddToHierarchicalData(XElement root, XElement newItem, string parentId)
           {
               // todo validate root status / find and add parent 
+              // validate root has value, then add
+              if (root.HasElements)
+              root.Add(newItem);
+
+              // root not empty, find parents and add
+              foreach (var descendant in root.Descendants())
+              {
+                  if (descendant.Attributes().Any(db => (db.Name == "id" && db.Value == parentId)))
+                  descendant.Add(newItem);
+              }
           }
     }
 }
