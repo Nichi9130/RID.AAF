@@ -83,7 +83,8 @@ namespace BusinessLayer
                       }
                       else
                       {
-                          
+                          var newElement = new XElement(item.Name, item.Value, new XAttribute("id", item.Id));
+                          BuildElement(newElement, item);
                       }
                   }
               }
