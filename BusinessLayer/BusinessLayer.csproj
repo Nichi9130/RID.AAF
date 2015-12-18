@@ -45,6 +45,7 @@
     <Compile Include="HierarchyItem.cs" />
     <Compile Include="Models\ApplicationConfigurationModel.cs" />
     <Compile Include="Models\ConfigurationModel.cs" />
+    <Compile Include="Models\ConfigurationsModel.cs" />
     <Compile Include="PopulateTreeHierarchyWithConfigurationNodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

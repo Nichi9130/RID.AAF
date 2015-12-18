@@ -19,7 +19,8 @@ namespace BusinessLayer
 
         public void CreateHierarchyData(string appGuid)
         {
-            // todo implement details
+            // Create DataTable 
+            _configurationTable = _businessLogic.GetAllConfiguration(appGuid);
         }
 
         public TreeNode[] CreateTreeNodes()

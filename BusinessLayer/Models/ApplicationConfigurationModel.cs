@@ -16,5 +16,9 @@ namespace BusinessLayer.Models
         public string UserId { get; set; }
         public string IsEncrypted { get; set; }
         public string Name { get; set; }
+
+        public ConfigurationsModel ChildConfigurationItems { get; set; }
+        public List<ApplicationConfigurationModel> ApplicationConfigurations { get; set; } 
+
     }
 }
