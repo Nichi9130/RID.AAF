@@ -93,6 +93,20 @@ namespace BusinessLayer
         private void BuildElement(XElement element, ApplicationConfigurationModel item)
         {
             // todo implement logic for parent validation
+            // Does the parent exist?
+            if (!XElementExistsByAtribute(HierarchicalData, "id", item.ParentId.ToString(CultureInfo.InvariantCulture)))
+            {
+                // Build the parent Element
+                ApplicationConfigurationModel parentElement =
+                    AppConfigModelDataList.Where(db => db.Id == item.ParentId).Select(db => db).FirstOrDefault();
+                if (parentElement != null)
+                {
+                    var newElement = new XElement(parentElement.Name,new XAttribute("id", parentElement.Id));
+                   // todo 'Research Recursion for control flow structures - TSH.DEV
+                    BuildElement(newElement, parentElement);
+                }
+                AddToHierarchicalData(HierarchicalData, element, item.ParentId);
+            }
         }
 
           private void AddToHierarchicalData(XElement root, XElement newItem, string parentId)
