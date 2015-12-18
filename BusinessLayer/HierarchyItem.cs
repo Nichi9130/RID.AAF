@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace BusinessLayer
         private void InitalizeDataList(DataTable dataTable)
         {
             AppConfigModelDataList = new List<ApplicationConfigurationModel>();
+            
             foreach (DataRow row in DataTable.Rows)
             {
                 AppConfigModelDataList.Add( new ApplicationConfigurationModel
@@ -68,6 +70,23 @@ namespace BusinessLayer
           private void BuildHierarchicalData()
         {
             // todo implement logic
+              HierarchicalData = new XElement("root", new XAttribute("id", "0"));
+
+              foreach (var item in AppConfigModelDataList)
+              {
+                  if (!XElementExistsByAtribute( HierarchicalData, "id", item.Id.ToString(CultureInfo.InvariantCulture)))
+                  {
+                      if (item.Value == String.Empty)
+                      {
+                          var newElementWithNull = new XElement(item.Name, new XAttribute("id", item.Id));
+                          BuildElement(newElementWithNull, item);
+                      }
+                      else
+                      {
+                          
+                      }
+                  }
+              }
         }
 
         private void BuildElement(XElement element, ApplicationConfigurationModel item)
